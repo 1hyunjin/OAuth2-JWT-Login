@@ -1,0 +1,46 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/blog
+    username: root
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1022520213443-95upi05kmtjge4nfhmoeiqjl112f7gdp.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+          kakao:
+            client-id: 0277270f32d46448fbaaaea2ed09b579
+            client-secret: VhqpC0iEfhRERKuxcMSD4deSszsjNwO2
+            scope:
+              - account_email
+              - profile_nickname
+            authorization-grant-type: authorization_code
+            redirect-uri: http://localhost:8080/login/oauth2/code/kakao
+            client-name: kakao
+            client-authentication-method: client_secret_post
+        provider:
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+logging:
+  level:
+    org.springframework : info
+#    org.springframework.security: debug
+jwt:
+  issuer: 1hyunjin@naver.com
+  secret_key: pr1ncess@leah
