@@ -1,9 +1,9 @@
 
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/blog
+    url: "데이터베이스 스키마"
     username: root
-    password: 1234
+    password: "비밀번호"
   jpa:
     hibernate:
       ddl-auto: update
@@ -16,14 +16,14 @@ spring:
       client:
         registration:
           google:
-            client-id: 1022520213443-95upi05kmtjge4nfhmoeiqjl112f7gdp.apps.googleusercontent.com
-            client-secret: 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
+            client-id: "client-id"
+            client-secret: "secret-key"
             scope:
               - email
               - profile
           kakao:
-            client-id: 0277270f32d46448fbaaaea2ed09b579
-            client-secret: VhqpC0iEfhRERKuxcMSD4deSszsjNwO2
+            client-id: "client-id"
+            client-secret: "secret-key"
             scope:
               - account_email
               - profile_nickname
@@ -42,5 +42,5 @@ logging:
     org.springframework : info
 #    org.springframework.security: debug
 jwt:
-  issuer: 1hyunjin@naver.com
-  secret_key: pr1ncess@leah
+  issuer: "발행자"
+  secret_key: "비밀번호"
